@@ -1,22 +1,23 @@
 //package pacoteA;
 public class Endereco{
     private String rua;
-    private String cidade;
     private int numero;
-    private String cep;
     private String casa;
     private String complemento;
     private String bairro;
     private String estado;
+    private String cidade;
+    private String cep;
 
-    public Endereco(String rua, String cidade){
+    public Endereco(String rua,int numero,String casa,String complemento,String bairro,String estado, String cidade,String cep){
         this.rua = rua;
-        this.cidade = cidade;
         this.numero = numero;
-        this.cep= cep;
         this.casa = casa;
         this.complemento = complemento;
         this.bairro = bairro;
+        this.estado = estado;
+        this.cidade = cidade;
+        this.cep= cep;
     }
     //RUA
     public String getRua(){
@@ -40,22 +41,22 @@ public class Endereco{
         this.numero = numero;
     }
     //CEP
-    public int getCep(){
+    public String getCep(){
         return cep;
     }
-    public void SetCep(int cep){
+    public void SetCep(String cep){
         this.cep = cep;
     }
     //ESTADO
-    public int getEstado(){
+    public String getEstado(){
         return estado;
     }
-    public void SetEstado(int estado){
+    public void SetEstado(String estado){
         this.estado = estado;
     }
     //CASA
     public String getCasa(){
-        return casa;
+       return casa;
     }
     public void setCasa(String casa){
         this.casa = casa;
@@ -77,9 +78,9 @@ public class Endereco{
 
     public String mostrarEndereco(){
         String descricao = "casa";
-        if(!casa){
+        if(casa.isEmpty()){
             descricao = "nao-casa";
         }
-        return String.format("Rua: %s \nCidade: %s\nNúmero: %d\nCEP: %s,\nCasa: %s\nComplemento: %s\nBairro: %s", rua, cidade, numero,cep,descricao,complemento,bairro);
+        return String.format("Rua: %s, %d, Casa: %s, Complemento: %s, Bairro: %s, Cidade: %s - Estado: %s, CEP: %s", rua, numero, casa,complemento,bairro,cidade,estado, cep);
     }
 }

@@ -17,12 +17,15 @@ public class Principal{
         // Pessoa pessoa1 = new Pessoa("Enzo", 21, "535682972",contato1, endereco1);
         // System.out.println(pessoa1.apresentar());
         Scanner scanner = new Scanner(System.in);
+        int op;
+        do{
         System.out.println("===SISTEMA DE CADASTRO===");
         System.out.println("1-Cadastrar nova Pessoa");
         System.out.println("2-Sair");
         System.out.print("Opção: ");
-        int op = scanner.NextInt();
-        while(op.hasNext()){
+        op = scanner.nextInt();
+        scanner.nextLine();
+
             switch(op){
                 case 1:
                     System.out.print("\nDigite seu nome: ");
@@ -30,6 +33,7 @@ public class Principal{
 
                     System.out.print("\nDigite sua idade: ");
                     int idade = scanner.nextInt();
+                    scanner.nextLine();
 
                     System.out.print("\nDigite seu cpf: ");
                     String cpf = scanner.nextLine();
@@ -38,15 +42,16 @@ public class Principal{
                     String email = scanner.nextLine();
 
                     System.out.print("\nDigite seu telefone: ");
-                    int telefone = scanner.nextInt();
+                    String telefone = scanner.nextLine();
 
                     System.out.print("\nDigite sua rua: ");
                     String rua = scanner.nextLine();
 
                     System.out.print("\nDigite o número: ");
                     int numero = scanner.nextInt();
+                    scanner.nextLine();
 
-                    System.out.print("\nCasa: ");
+                    System.out.print("\nCasa: Sim ou Não? ");
                     String casa = scanner.nextLine();
 
                     System.out.print("\nDigite seu complemento: ");
@@ -69,6 +74,8 @@ public class Principal{
                     Contato contato1 = new Contato(email,telefone);
 
                     Pessoa p1  = new Pessoa(nome,idade,cpf,contato1,endereco1);
+                    System.out.println("\nCadastro realizado com sucesso!");
+                    System.out.println(p1.apresentar());
                     
                     break;
                 case 2:
@@ -77,7 +84,7 @@ public class Principal{
                 default:
                     System.out.println("Opção inválida");
             }
-        }
+        }while(op!=2);
         
     }
 }
