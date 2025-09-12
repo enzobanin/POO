@@ -1,4 +1,5 @@
 package service;
+import model.Pessoa;
 public class CadastroService{
     private Pessoa pessoa;
 
@@ -8,13 +9,13 @@ public class CadastroService{
     //     this.pessoa = pessoa;
     // }
 
-    public Pessoa cadastrarPessoa(String nome,
+    public void cadastrarPessoa(String nome,
     int idade){
-        return new Pessoa(nome,idade);
+        new Pessoa(nome,idade);
         // this.pessoa.nome = nome;
         // this.pessoa.idade = idade;
     }
-    public String mostrarPessoa(Pessoa pessoa){
-        return pessoa.exibirDados();
+    public void mostrarPessoa(Pessoa pessoa){
+        pessoa.exibirDados();
     }
 }
