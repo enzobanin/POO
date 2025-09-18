@@ -16,7 +16,7 @@ public class Pessoa{
     public int getIdade(){
         return idade;
     }
-    public void exibirDados(){
+    public String exibirDados(){
         String mensagem = "Nome: " + getNome() + ", idade: " + getIdade();
         return mensagem;
     }

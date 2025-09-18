@@ -36,19 +36,19 @@ public class Pessoa{
         this.cpf = cpf;
     }
     //CONTATO
-    public String getContato(){
-        return contato;
-    }
-    public void setContato(String contato){
-        this.contato = contato;
-    }
-    //ENDERECO
-    public String getEndereco(){
-        return endereco;
-    }
-    public void setEndereco(String endereco){
-        this.endereco = endereco;
-    }
+    // public String getContato(){
+    //     return contato;
+    // }
+    // public void setContato(String contato){
+    //     this.contato = contato;
+    // }
+    // //ENDERECO
+    // public String getEndereco(){
+    //     return endereco;
+    // }
+    // public void setEndereco(String endereco){
+    //     this.endereco = endereco;
+    // }
 
     public String apresentar(){
         return String.format("Nome: %s\nIdade: %d\nCPF: %s\nContato: %s\nEndereco: %s",nome,
