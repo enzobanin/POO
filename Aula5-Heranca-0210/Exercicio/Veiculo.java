@@ -31,6 +31,19 @@ public class Veiculo {
         System.out.println("Ano: " + ano);
         System.out.println("motorLigado: " + motorLigado);
     }
+    public static void main(String[] args){
+       Veiculo v1 = new Veiculo("GM", "Vectra", "Prata", 2011);
+       v1.ligarMotor();
+       v1.exibirInformacoes(); 
+       CarroPasseio c1 = new CarroPasseio(v1.marca,v1.modelo,v1.cor,v1.ano, 5);
+       c1.buzinar();
+       c1.exibirInformacoes();
+       Caminhonete c2 = new Caminhonete(v1.marca, v1.modelo, v1.cor, v1.ano, 500, true);
+       c2.desligarMotor();
+       c2.ligarMotor();
+       c2.engatar4x4();
+       c2.exibirInformacoes();
+    }
 
 }
 
@@ -56,7 +69,7 @@ class CarroPasseio extends Veiculo{
 
 class Caminhonete extends Veiculo{
     private double carga;
-    private boolean tracao4x4 = false;
+    private boolean tracao4x4;
     public Caminhonete(String marca,
     String modelo,
     String cor,
