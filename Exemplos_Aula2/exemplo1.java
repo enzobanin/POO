@@ -1,4 +1,4 @@
-package POO.Exemplos_Aula2;
+package Exemplos_Aula2;
 import java.util.Scanner;
 
 public class exemplo1{

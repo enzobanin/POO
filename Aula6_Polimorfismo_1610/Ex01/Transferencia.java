@@ -1,4 +1,4 @@
-package POO.Aula6_Polimorfismo_1610.Ex01;
+package Aula6_Polimorfismo_1610.Ex01;
 
 public class Transferencia extends Operacao implements Operavel{
     public String contaDestino;

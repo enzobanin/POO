@@ -1,4 +1,4 @@
-package POO.Aula6_Polimorfismo_1610.Ex01;
+package Aula6_Polimorfismo_1610.Ex01;
 
 public class Main{
     public static void main(String [] args){
